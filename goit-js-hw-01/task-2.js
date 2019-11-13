@@ -1,5 +1,5 @@
 const total = 100;
-const ordered = 80;
+const ordered = 200;
 
 const type =
   ordered <= total

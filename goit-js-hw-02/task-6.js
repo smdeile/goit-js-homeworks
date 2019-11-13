@@ -10,11 +10,16 @@ const calculateTheAmount = function(array) {
 do {
   input = prompt('Enter a number,please');
   numbers.push(input);
-  console.log(numbers);
+  if (Number(input) !== Number(input)) {
+    numbers.pop(input);
+    alert(`"${input}" - это не число, попробуйте еще раз`);
+  }
   if (input === null) {
     numbers.pop(input);
-    console.log(numbers);
+
     break;
   }
 } while (input !== null);
-console.log(calculateTheAmount(numbers));
+console.log(numbers);
+
+console.log(`Общая сумма чисел равна ${calculateTheAmount(numbers)}`);
