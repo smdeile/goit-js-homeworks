@@ -6,6 +6,9 @@ do {
   input = prompt('введите любое число');
   inputNumber = Number(input);
   total += inputNumber;
+  if (total !== total) {
+    alert('введите число');
+  }
   console.log('typeof input', typeof input);
   console.log('typeof total', typeof total);
   console.log('inpyt', input);
@@ -15,7 +18,4 @@ do {
 } while (total === total && input !== null);
 if (input === null) {
   alert(`Получилась сумма ${total}`);
-}
-if (total !== total) {
-  alert('введите число');
 }

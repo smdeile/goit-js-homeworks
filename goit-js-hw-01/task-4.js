@@ -4,8 +4,8 @@ let message;
 const droidsBuy = prompt(
   'Мое почтение господин!  Введите, пожалуйста, сколько дроидов вы желаете преобрести:',
 );
-let totalPrice = Number(droidsBuy * pricePerDroid);
-let restCredits = Number(credits - totalPrice);
+let totalPrice = droidsBuy * pricePerDroid;
+let restCredits = credits - totalPrice;
 if (droidsBuy === null) {
   message = 'Отменено пользователем!';
 } else if (totalPrice > credits) {
