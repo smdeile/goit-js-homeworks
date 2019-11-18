@@ -15,4 +15,4 @@ console.log(checkForSpam('JavaScript weekly newsletter')); // false
 console.log(checkForSpam('Get best sale offers now!')); // true
 
 console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
-console.log(checkForSpam('dssdale')); // если сейл +к то все равно тру? почему?
+console.log(checkForSpam('dssdale')); // если сейл +к то все равно тру? почему? или в условии такого не сказано?
