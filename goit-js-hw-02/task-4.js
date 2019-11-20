@@ -1,15 +1,5 @@
 const formatString = function(string) {
-  if (string.length < 40) {
-    return string;
-  }
-  if (string.length > 40) {
-    let formatString;
-    let message;
-    formatString = string.split('');
-    formatString = formatString.slice(0, 39);
-    formatString = formatString.join('');
-    return `${formatString}...`;
-  }
+  return string.length > 40 ? `${string.slice(0, 39)}...` : string;
 };
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 // вернется оригинальная строка

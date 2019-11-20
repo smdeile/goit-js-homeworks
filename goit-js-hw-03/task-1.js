@@ -1,0 +1,3 @@
+const hotel = {
+  name: 'california',
+};

@@ -1,7 +1,7 @@
 let input;
 const numbers = [];
 let total = 0;
-const calculateTheAmount = function(array) {
+const calculateTheAmount = array => {
   for (const number of array) {
     total += Number(number);
   }
@@ -9,16 +9,16 @@ const calculateTheAmount = function(array) {
 };
 do {
   input = prompt('Enter a number,please');
-  numbers.push(input);
-  if (Number(input) !== Number(input)) {
-    numbers.pop(input);
-    alert(`"${input}" - это не число, попробуйте еще раз`);
-  }
-  if (input === null) {
-    numbers.pop(input);
+  const userInput = Number.parseFloat(input);
 
+  if (input === null) {
     break;
   }
+  if (isNaN(userInput)) {
+    alert(`"${input}" - это не число, попробуйте еще раз`);
+    continue;
+  }
+  numbers.push(userInput);
 } while (input !== null);
 console.log(numbers);
 
