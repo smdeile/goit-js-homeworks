@@ -1,35 +1,14 @@
-const getAllPropValues = (arr, prop) => {
-  const arrayOfPropValues = [];
-  for (let i = 0; i < products.length; i += 1) {
-    const { name, price, quantity } = products[i];
+const getAllPropValues = (users, prop) => {
+  let Values = [];
+  for (let user of users) {
+    if (prop in user) {
+      console.log(prop);
+      console.log(user);
 
-    switch (prop) {
-      case 'name':
-        arrayOfPropValues.push(name);
-        break;
-
-      case 'price':
-        arrayOfPropValues.push(price);
-        break;
-
-      case 'quantity':
-        arrayOfPropValues.push(quantity);
-        break;
-
-      default:
-        break;
+      Values.push(user[prop]);
     }
-    // if (prop === 'name') {
-    //   arrayOfPropValues.push(name);
-    // }
-    // if (prop === 'price') {
-    //   arrayOfPropValues.push(price);
-    // }
-    // if (prop === 'quantity') {
-    //   arrayOfPropValues.push(quantity);
-    // }
   }
-  return arrayOfPropValues;
+  return Values;
 };
 const products = [
   { name: 'Радар', price: 1300, quantity: 4 },
@@ -40,6 +19,6 @@ const products = [
 
 console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
 
-console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+// console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
 
-console.log(getAllPropValues(products, 'category')); // []
+// console.log(getAllPropValues(products, 'category')); // []

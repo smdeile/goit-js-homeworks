@@ -2,10 +2,10 @@ const findBestEmployee = employees => {
   const valuesEmployee = Object.entries(employees);
   let bestResult = 0;
   let winner;
-  for (const value of valuesEmployee) {
-    if (value[1] > bestResult) {
-      bestResult = value[1];
-      winner = `${value[0]}: ${value[1]}`;
+  for (const [key, value] of valuesEmployee) {
+    if (value > bestResult) {
+      bestResult = value;
+      winner = `${key}: ${value}`;
     }
   }
   return winner;

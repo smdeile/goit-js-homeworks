@@ -1,3 +1,4 @@
+'use strict';
 // const hotel = {
 //   name: 'california',
 //   rooms: 6,
@@ -169,7 +170,118 @@
 // const rgb = [200, 255, 100];
 // const [red, green, blue, alfa = 0.3] = rgb;
 // console.log(`red: ${red}, green ${green}, blue ${blue}, alfa ${alfa}`);
+// const name = 'john';
+// const age = 25;
+// const option = 'gender';
+// const user = {
+//   name,
+//   age,
+//   [option]: 'male',
+// };
+// // user[option] = 'male';
+// console.log(user);
 
-const rgb = [200, 255, 100];
-const [red, ...colors] = rgb;
-console.log(`red: ${red}, colors: ${colors}`);
+// const fruits = {
+//   mango: 200,
+//   banana: 600,
+//   kiwi: 100,
+//   apple: 10,
+//   big: 10,
+//   small: 1001,
+//   hello: 1000,
+// };
+// let more = 0;
+// let message;
+// let Array = [];
+
+// const findBiggestQuantuty = arr => {
+//   let quantity = Object.entries(fruits);
+//   for (let i = 0; i < quantity.length; i++) {
+//     if (quantity[i][1] > more) {
+//       more = quantity[i][1];
+//       message = `самое большое ${quantity[i][0]}: ${more}`;
+//     }
+//   }
+//   return message;
+// };
+// console.log(findBiggestQuantuty(fruits));
+
+// const findBiggestQuantity = arr => {
+//   let quantity = Object.entries(fruits);
+
+//   for (let i = 0; i < quantity.length; i++) {
+//     if (true) {
+//       const key = quantity[i][0];
+//       const value = quantity[i][1];
+//       const object = { [key]: value };
+
+//       Array.push(object);
+//     }
+//   }
+//   return Array;
+// };
+// console.log(findBiggestQuantity(fruits));
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = [1, 2, 3, 4, 5];
+// const arr3 = [...arr1, ...arr2];
+// console.log(arr3);
+const user = {
+  id: 1,
+  name: 'John',
+  dateOfCreation: '1999',
+  age: 10,
+  salary: 10,
+  children: 5,
+  friends: {
+    bestFriends: ['Mikel', 'Johns', 'sdsdfsdf', 'Stas'],
+    blackList: ['Mikel', 'Johns', 'Stas'],
+  },
+};
+// const changeUser = ({ name, age }) => ({ name, age });
+// console.log(changeUser(user));
+// const filterUserFriends = ({ friends }) => {
+//   const { bestFriends, blackList } = friends;
+//   for (let i = 0; i < bestFriends.length; i += 1) {
+//     while (blackList.includes(bestFriends[i])) {
+//       const newArr = bestFriends.splice([i], 1);
+//     }
+//   }
+//   console.log(bestFriends);
+// };
+// filterUserFriends(user);
+
+const tempArr = [];
+const foo = ({ friends }) => {
+  for (let el of friends.bestFriends) {
+    if (!friends.blackList.includes(el)) {
+      tempArr.push(el);
+      // console.log(el);
+    }
+  }
+  friends.bestFriends = tempArr;
+  return friends.bestFriends;
+};
+
+console.log(foo(user));
+// const user = {
+//   id: 1,
+//   name: 'John',
+//   dateOfCreation: '1999',
+//   age: 10,
+//   salary: 10,
+//   children: 5,
+//   friends: {
+//     bestFriends: ['Mikel', 'Johns', 'sdsdfsdf', 'Stas'],
+//     blackList: ['Mikel', 'Johns', 'Stas'],
+//   },
+// };
+// const filterUserFriends = ({ friends }) => {
+//   const { bestFriends, blackList } = friends;
+//   for (let i = 0; i < bestFriends.length; i += 1) {
+//     while (blackList.includes(bestFriends[i])) {
+//       const newArr = bestFriends.splice([i], 1);
+//     }
+//   }
+//   console.log(bestFriends);
+// };
+// filterUserFriends(user);
