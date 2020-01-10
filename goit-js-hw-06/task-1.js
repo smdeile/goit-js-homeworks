@@ -153,17 +153,11 @@ console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
 const getSortedUniqueSkills = users => {
-  return users
-    .reduce((allSkills, user) => {
-      allSkills.push(...user.skills);
-      return allSkills;
-    }, [])
-    .reduce((arr, skill) => {
-      if (!arr.includes(skill)) {
-        arr.push(skill);
-      }
-      return arr;
-    }, [])
-    .sort();
+  const allSkills = users.reduce((allSkills, user) => {
+    allSkills.push(...user.skills);
+    return allSkills;
+  }, []);
+  const uniq = [...new Set(allSkills)];
+  return uniq.sort();
 };
 console.log(getSortedUniqueSkills(users));
