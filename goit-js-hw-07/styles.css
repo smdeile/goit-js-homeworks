@@ -1,0 +1,43 @@
+.gallery {
+  display: flex;
+  flex-direction: row;
+}
+.module3 {
+  list-style: none;
+}
+.module3 img {
+  height: 300px;
+}
+button {
+  cursor: pointer;
+  width: 70px;
+  height: 40px;
+}
+.list {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.names {
+  width: 300px;
+  height: 50px;
+  border: 3px solid black;
+}
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border: 3px solid #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+#font-size-control {
+  display: block;
+}
+/* #text {
+  font-size: 100px;
+} */
