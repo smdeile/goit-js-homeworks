@@ -16,36 +16,33 @@
 // body.appendChild(clone);
 // console.log(clone);
 'use strict';
-import users from './user.js';
-const userList = document.querySelector('.list');
-const buttonSort = document.querySelector('.buttonSort');
-const buttonDelete = document.querySelector('.buttonDelete');
-let sortDirection = 1;
+// import users from './user.js';
+// const userList = document.querySelector('.list');
+// const buttonSort = document.querySelector('.buttonSort');
+// const buttonDelete = document.querySelector('.buttonDelete');
+// let sortDirection = 1;
 
-function insertList(users) {
-  const insertNames = users.reduce((usersListMarkup, user) => {
-    const { name, age } = user;
-    return (
-      usersListMarkup + `<li class="names"> name: ${name} age: ${age}</li>`
-    );
-  }, '');
-  userList.innerHTML = insertNames;
-}
+// function insertList(users) {
+//   const insertNames = users.reduce((usersListMarkup, user) => {
+//     const { name, age } = user;
+//     return (
+//       usersListMarkup + `<li class="names"> name: ${name} age: ${age}</li>`
+//     );
+//   }, '');
+//   userList.innerHTML = insertNames;
+// }
 
-const handleClickSortAge = () => {
-  const sortedUsers = [...users].sort(
-    (a, b) => (a.age - b.age) * sortDirection,
-  );
-  insertList(sortedUsers);
-  sortDirection = sortDirection * -1;
-};
-const handleClickDelete = () => {
-  const deleteUser = users.pop();
-  insertList(users);
-};
-// const handleClickDelete = () => {};
-buttonSort.addEventListener('click', handleClickSortAge);
-buttonDelete.addEventListener('click', handleClickDelete);
-// buttonSort.removeEventListener('click', handleClickSortAge);
-// buttonSort.addEventListener('click', handleClickSortAgeReverse);
-insertList(users);
+// const handleClickSortAge = () => {
+//   const sortedUsers = [...users].sort(
+//     (a, b) => (a.age - b.age) * sortDirection,
+//   );
+//   insertList(sortedUsers);
+//   sortDirection = sortDirection * -1;
+// };
+// const handleClickDelete = () => {
+//   const deleteUser = users.pop();
+//   insertList(users);
+// };
+// buttonSort.addEventListener('click', handleClickSortAge);
+// buttonDelete.addEventListener('click', handleClickDelete);
+// insertList(users);

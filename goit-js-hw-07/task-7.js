@@ -4,4 +4,4 @@ const handleChangeValue = function(val) {
   changeTextSize.style.fontSize = `${val.currentTarget.value}px`;
 };
 
-textControl.addEventListener('change', handleChangeValue);
+textControl.addEventListener('input', handleChangeValue);

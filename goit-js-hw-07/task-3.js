@@ -16,15 +16,26 @@ const images = [
   },
 ];
 
-function addImages(images) {
-  const listOfImages = document.querySelector('#gallery');
-  listOfImages.classList.add('gallery');
-  const insertTags = images.map(el => {
-    const image = Object.values(el);
-    console.log(image);
-    return `<li class="module3"><img src="${image[0]}" alt="${image[1]}"></li>`;
-  });
-  listOfImages.insertAdjacentHTML('afterbegin', insertTags);
-}
+const createGalleryItem = ({ url, alt }) =>
+  `<li class="module3"><img src="${url}" alt="${alt}"></li>`;
 
-addImages(images);
+const galleryMarkup = images.reduce(
+  (acc, item) => acc + createGalleryItem(item),
+  '',
+);
+
+const galleryList = document.querySelector('#gallery');
+galleryList.insertAdjacentHTML('afterbegin', galleryMarkup);
+
+// function addImages(images) {
+//   const listOfImages = document.querySelector('#gallery');
+//   listOfImages.classList.add('gallery');
+//   const insertTags = images.map(el => {
+//     const image = Object.values(el);
+//     console.log(image);
+//     return `<li class="module3"><img src="${image[0]}" alt="${image[1]}"></li>`;
+//   });
+//   listOfImages.insertAdjacentHTML('afterbegin', insertTags);
+// }
+
+// addImages(images);
