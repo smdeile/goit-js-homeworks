@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+.item {
+  width: 50%;
+  color: #fff;
+  font-size: 22px;
+  padding: 10px;
+  margin: 0;
+}
+.item__inner {
+  background: purple;
+  padding: 20px;
+}
+.item__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0.1em 0;
+}
+.item__image {
+  max-width: 100%;
+}
+.list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
