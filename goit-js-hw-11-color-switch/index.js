@@ -23,7 +23,7 @@ const refs = {
 //   clearInterval(timerId);
 //   isActive = false;
 // };
-const randomiserColor = {
+const colorizer = {
   isActive: false,
   changerColor() {
     const randomIntegerFromInterval = (min, max) => {
@@ -46,9 +46,9 @@ const randomiserColor = {
 };
 refs.startBtn.addEventListener(
   'click',
-  randomiserColor.startChangeColor.bind(randomiserColor),
+  colorizer.startChangeColor.bind(colorizer),
 );
 refs.stopBtn.addEventListener(
   'click',
-  randomiserColor.stopChangeColor.bind(randomiserColor),
+  colorizer.stopChangeColor.bind(colorizer),
 );
