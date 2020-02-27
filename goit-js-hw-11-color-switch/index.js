@@ -29,7 +29,8 @@ const colorizer = {
     const randomIntegerFromInterval = (min, max) => {
       return Math.floor(Math.random() * (max - min + 1) + min);
     };
-    refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, 5)];
+    refs.body.style.backgroundColor =
+      colors[randomIntegerFromInterval(0, colors.length - 1)];
   },
 
   startChangeColor() {

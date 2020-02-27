@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  transform: translate(50%);
+  background-color: #332211;
+  color: blueviolet;
+}

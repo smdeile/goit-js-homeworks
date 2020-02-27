@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.task {
+  display: block;
+  background-color: black;
+  width: 300px;
+  height: 150px;
+}
+.output {
+  color: #225555;
+  text-align: center;
+  width: 250px;
+  height: 100px;
+}
+.button__block {
+  width: 200px;
+
+  display: flex;
+  justify-content: space-around;
+}
