@@ -9,7 +9,7 @@ class CountdownTimer {
     };
 
     setInterval(() => {
-      time = targetDate - Date.now();
+      this.time = targetDate - Date.now();
       this.refs.days.textContent = this.getDay();
       this.refs.hours.textContent = this.getHours();
       this.refs.mins.textContent = this.getMins();
@@ -18,8 +18,8 @@ class CountdownTimer {
   }
 
   getDay() {
-    const days = Math.floor(this.time / (1000 * 60 * 60 * 24));
-    return days;
+    const day = Math.floor(this.time / (1000 * 60 * 60 * 24));
+    return day;
   }
   getHours() {
     const hours = Math.floor(
@@ -38,7 +38,7 @@ class CountdownTimer {
 }
 new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date('Mar 23, 2020'),
+  targetDate: new Date('Mar 21, 2020'),
 });
 new CountdownTimer({
   selector: '#timer-2',
