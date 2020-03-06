@@ -1,0 +1,21 @@
+<div class="country__block">
+    <h2>{{name}}</h2>
+    <div class="description-flag">
+        <div class="description">
+            <ul class="description__list">
+                <li>Capital:{{capital}}</li>
+                <li>Population:{{population}}</li>
+                <li>
+                    Languages:
+                    <ul>
+                        {{#each languages}}<li>{{this.name}}</li>{{/each}}
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="flag">
+            <img src="{{flag}}" alt="" class="flag__image" />
+        </div>
+    </div>
+</div>
