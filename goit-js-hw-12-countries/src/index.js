@@ -15,13 +15,12 @@ function buildMarkupCard(data) {
   refs.card.insertAdjacentHTML('beforeend', markupCard);
 }
 function buildMarkupList(data) {
-  const markupList = templatesList(data.map(el => el.name));
+  const markupList = templatesList(data);
   refs.card.insertAdjacentHTML('afterbegin', markupList);
 }
 function searchCounty(e) {
-  e.preventDefault();
   const country = e.target.value;
-  if (country !== '') {
+  if (country) {
     return fetch(`https://restcountries.eu/rest/v2/name/${country}`)
       .then(response => {
         return response.json();
@@ -34,7 +33,7 @@ function searchCounty(e) {
             text: 'To many matches.',
           });
         }
-        if ((data.length > 2) & (data.length < 10)) {
+        if (data.length > 2 && data.length < 10) {
           refs.card.innerHTML = '';
           buildMarkupList(data);
         }
@@ -43,7 +42,9 @@ function searchCounty(e) {
           buildMarkupCard(data);
         }
       })
-      .catch(console.error('wow wow wow'));
+      .catch(function(e) {
+        console.error(e);
+      });
   }
 }
 const country = refs.inputCountry.addEventListener('input', debounced);
