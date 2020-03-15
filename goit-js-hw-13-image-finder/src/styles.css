@@ -7,3 +7,14 @@ html {
 *::after {
   box-sizing: inherit;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.photo {
+  width: 300px;
+  height: 200px;
+}
+.stats {
+  display: flex;
+}

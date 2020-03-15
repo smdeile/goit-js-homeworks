@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.wrapper {
+  margin: 0 auto;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 475px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}

@@ -49,13 +49,10 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
-    "animate.css": "^3.7.2",
     "core-js": "^3.3.4",
     "handlebars": "^4.5.3",
     "infinite-scroll": "^3.0.6",
-    "lodash.debounce": "^4.0.8",
     "material-design-icons": "^3.0.1",
-    "pnotify": "^4.0.1",
-    "regenerator-runtime": "^0.13.3"
+    "pnotify": "^4.0.1"
   }
 }

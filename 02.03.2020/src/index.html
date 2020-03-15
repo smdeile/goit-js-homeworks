@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Webpack Starter Kit</title>
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>LovE</h1>
+      <form class="form">
+        <p>Love Lodestone</p>
+        <label class="label register-form">
+          user Login
+          <input class="input" type="text" name="login" autocomplete="off" />
+        </label>
+        <label class="label register-form-label">
+          password
+          <input class="input" type="password" name="password" />
+        </label>
+        <button class="button" type="submit">Login</button>
+        <a href="#" class="link">go to login page</a>
+      </form>
+    </div>
+    <div class="swiper-container">
+     
+      <div class="swiper-wrapper"></div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Zkwv8ZHein66BAALTpWsJAQorKjiTlw&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
