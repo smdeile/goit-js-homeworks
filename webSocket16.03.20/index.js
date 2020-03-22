@@ -115,10 +115,15 @@ function checkLocalStorage() {
     return;
   }
   if (localStorageCheck) {
-    // loginBlock.classList.toggle('hidden');
     console.log('if localstorage check');
     loginName = dataFromLS.name;
     avatar = dataFromLS.image;
+    console.log(avatar);
+    if (loginName === undefined && avatar === undefined) {
+      localStorageSet();
+      map.classList.toggle('hidden');
+      exit.classList.toggle('hidden');
+    }
     createLoginInfo();
 
     myModule.launchMap();
@@ -131,6 +136,11 @@ function localStorageSet() {
     name: loginName,
     image: avatar,
   };
+  // const loginName = Login.name;
+  // const loginImage = Login.image;
+  // if (loginImage === undefined && loginName === undefined) {
+  //   alert('reload page');
+  // }
   localStorage.setItem('Login', JSON.stringify(Login));
   loginBlock.classList.toggle('hidden');
 
@@ -138,12 +148,14 @@ function localStorageSet() {
 }
 function createLoginInfo() {
   showLogin.textContent = `You enter like: ${loginName}`;
+  console.log(avatar);
+  if (avatar !== undefined) {
+    const showAvatarImg = document.createElement('img');
+    showAvatarImg.classList.add('show--avatar__image');
 
-  const showAvatarImg = document.createElement('img');
-  showAvatarImg.classList.add('show--avatar__image');
-
-  showAvatarImg.setAttribute('src', avatar);
-  showAvatar.appendChild(showAvatarImg);
+    showAvatarImg.setAttribute('src', avatar);
+    showAvatar.appendChild(showAvatarImg);
+  }
 }
 exit.addEventListener('click', () => {
   localStorage.clear();
