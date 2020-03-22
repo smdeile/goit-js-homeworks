@@ -9,6 +9,10 @@ html {
 *::after {
   box-sizing: inherit;
 }
+body {
+  width: 100vw;
+  height: 100vh;
+}
 .wrapper {
   margin: 0 auto;
   width: 1024px;
