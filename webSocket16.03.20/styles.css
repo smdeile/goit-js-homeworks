@@ -1,0 +1,219 @@
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 1400px;
+  display: flex;
+  border: hotpink solid 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgb(241, 236, 239);
+}
+
+#window-message {
+  width: 723px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  border-bottom: hotpink solid 5px;
+}
+.login-block__visible {
+  background-color: #9a159e;
+  border: solid darkmagenta 2px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.login {
+  height: 50px;
+  width: 200px;
+  font-size: 28px;
+  color: #9a159e;
+}
+.nickname-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.submit--nickname {
+  border-radius: 100%;
+  background-color: rgb(23, 206, 63);
+  border: none;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+}
+
+.login-tittle {
+  width: 200px;
+  text-align: center;
+  color: #abe27e;
+  font-size: 28px;
+}
+.form-typing {
+  width: 695px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.input {
+  padding: 5px;
+  width: 580px;
+  height: 100px;
+  border: none;
+  background-color: transparent;
+}
+.input:focus {
+  outline: none;
+}
+.form-typing__button {
+  margin: 5px;
+  width: 90px;
+  border-radius: 50%;
+  /* background-color: indianred; */
+  border: none;
+}
+.send-message {
+  width: 80px;
+  border-radius: 100%;
+}
+.show--user-info {
+  align-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  width: 600px;
+}
+.exit {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(182, 43, 136);
+  font-size: 20px;
+  color: #abe27e;
+}
+.chat--wrapper {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  /* border-right: hotpink solid 5px; */
+  overflow: hidden;
+}
+
+.span {
+  display: flex;
+
+  border-bottom: solid red 2px;
+}
+p {
+  width: 50%;
+  word-wrap: break-word;
+}
+
+.map {
+  display: block;
+  width: 695px;
+  height: 600px;
+  border-top: 5px hotpink solid;
+
+  margin-top: 10px;
+}
+.hidden {
+  display: none;
+}
+.map-script {
+  display: none;
+}
+.avatar {
+  max-width: 100px;
+}
+.show--user-info {
+  display: flex;
+}
+.show--avatar__image {
+  max-width: 100px;
+}
+.show--login {
+  width: 100px;
+  font-size: 24px;
+  color: rgb(182, 43, 136);
+  max-height: 100px;
+  overflow: hidden;
+}
+label {
+  display: block;
+}
+.right-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 5px hotpink solid;
+}
+.left-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/* input file */
+.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::after {
+  content: 'Download your photo,pls!';
+  color: purple;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: none;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin-left: 35px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+/* .custom-file-input:hover::after {
+  border-color: black;
+} */
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::after {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}

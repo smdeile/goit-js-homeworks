@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>WebS</title>
+  </head>
+  <body>
+    <div class="login-block hidden">
+      <div class="login-block__visible">
+        <label> <input type="file" class="custom-file-input"/></label>
+        <form class="nickname-block">
+          <!-- <label for="#login"></label> -->
+          <p class="login-tittle">Enter your name, please!</p>
+          <input type="text" class="login" id="login" />
+          <button class="submit--nickname">oK!</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="left-block">
+        <div class="chat--wrapper">
+          <div id="window-message"></div>
+        </div>
+        <form class="form-typing">
+          <input
+            type="text"
+            class="input"
+            placeholder="please, wright smth..."
+          />
+          <button class="form-typing__button" id="submit">
+            <img
+              class="send-message"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRTUmtMzgB1hEMdmDlPufecEFIKp89zXWCe8MzBRSYt3dwVahJi"
+              alt="send-message"
+            />
+          </button>
+        </form>
+      </div>
+      <div class="right-block">
+        <div class="show--user-info hidden">
+          <p class="show--login"></p>
+          <div class="show--avatar"></div>
+          <button class="exit ">Clean login info...</button>
+        </div>
+        <div class="map " id="map"></div>
+      </div>
+    </div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Zkwv8ZHein66BAALTpWsJAQorKjiTlw"
+      data-name="mapScript"
+      class="map-script"
+    ></script>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
