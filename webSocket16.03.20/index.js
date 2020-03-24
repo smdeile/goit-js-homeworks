@@ -39,12 +39,10 @@ downloadAvatarBtn.addEventListener('change', e => {
   FR.readAsDataURL(file);
   FR.addEventListener('load', e => {
     avatar = e.target.result;
-    console.log(avatar);
   });
 });
 nicknameBlock.addEventListener('submit', e => {
   e.preventDefault();
-  console.log(e);
 
   if (avatar === undefined) {
     console.log(avatar);
