@@ -134,6 +134,7 @@ html {
 }
 
 .span {
+  width: 500px;
   display: flex;
   flex-direction: column;
   border-bottom: solid red 2px;
@@ -237,12 +238,14 @@ label {
   display: block;
 }
 .right-block {
+  width: 510px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-left: 5px hotpink solid;
 }
 .left-block {
+  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
