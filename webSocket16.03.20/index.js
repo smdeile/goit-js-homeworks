@@ -59,10 +59,8 @@ sendMessage.addEventListener('submit', async event => {
       image: avatar,
     }),
   );
-  console.log('senda');
 });
 ws.onmessage = ({ data }) => {
-  console.log('check new message');
   const { name, message, cords, image } = JSON.parse(data);
 
   createMarkup(name, message, image);
@@ -100,14 +98,8 @@ function checkLocalStorage() {
   const localStorageCheck = localStorage.getItem('Login');
   const dataFromLS = JSON.parse(localStorageCheck);
 
-  console.log(localStorageCheck);
-  // console.log(dataFromLS.name);
-  // console.log(dataFromLS);
   if (localStorageCheck === null) {
-    // loginBlock.classList.toggle('hidden');
-    console.log('check and undefined');
     localStorageSet();
-
     map.classList.toggle('hidden');
     exit.classList.toggle('hidden');
 
@@ -148,7 +140,6 @@ function localStorageSet() {
 }
 function createLoginInfo() {
   showLogin.textContent = `You enter like: ${loginName}`;
-  console.log(avatar);
   if (avatar !== undefined) {
     const showAvatarImg = document.createElement('img');
     showAvatarImg.classList.add('show--avatar__image');
