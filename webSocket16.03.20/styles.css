@@ -7,10 +7,10 @@ html {
 *::after {
   box-sizing: inherit;
 }
-body {
-  width: 100vw;
+/* body {
+
   height: 100vh;
-}
+} */
 .wrapper {
   margin: 0 auto;
   max-width: 1024px;
