@@ -1,8 +1,5 @@
 html {
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-  heoverflow: hidden;
 }
 
 *,
@@ -13,11 +10,12 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  overflow: ;
+  overflow: hidden;
 }
 .wrapper {
   margin: 0 auto;
-  width: 1024px;
+  overflow: hidden;
+  max-height: 100vh;
   display: flex;
   border: hotpink solid 5px;
   border-radius: 5px;
