@@ -45,12 +45,10 @@ nicknameBlock.addEventListener('submit', e => {
   e.preventDefault();
 
   if (avatar === undefined) {
-    console.log(avatar);
     return;
   }
   loginName = login.value;
   if (loginName === '') {
-    console.log(loginName);
     return;
   }
   createLoginInfo();
@@ -115,9 +113,6 @@ function checkLocalStorage() {
   const dataFromLS = JSON.parse(localStorageCheck);
 
   if (localStorageCheck === null) {
-    console.log('ls null');
-    console.log(localStorageCheck);
-    console.log(dataFromLS);
     localStorageSet();
 
     map.classList.toggle('hidden');
