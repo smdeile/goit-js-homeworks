@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 *,
@@ -12,6 +12,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+  overflow: ;
 }
 .wrapper {
   margin: 0 auto;
@@ -169,7 +170,7 @@ p {
 }
 .show--login {
   width: 100px;
-  font-size: 24px;
+  font-size: 14px;
   color: rgb(182, 43, 136);
   max-height: 100px;
   overflow: hidden;

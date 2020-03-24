@@ -107,10 +107,9 @@ function checkLocalStorage() {
     return;
   }
   if (localStorageCheck) {
-    console.log('if localstorage check');
     loginName = dataFromLS.name;
     avatar = dataFromLS.image;
-    console.log(avatar);
+
     if (loginName === undefined && avatar === undefined) {
       localStorageSet();
       map.classList.toggle('hidden');
