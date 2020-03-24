@@ -111,7 +111,13 @@ function createMarkup(name, message, image) {
 function checkLocalStorage() {
   const localStorageCheck = localStorage.getItem('Login');
   const dataFromLS = JSON.parse(localStorageCheck);
+  // console.log(localStorageCheck);
+  // console.log(dataFromLS);
+  // const nameLS = dataFromLS.name;
+  // const avatarLS = dataFromLS.name;
+  // if (nameLS === ''){
 
+  // }
   if (localStorageCheck === null) {
     localStorageSet();
 
@@ -126,6 +132,12 @@ function checkLocalStorage() {
     avatar = dataFromLS.image;
 
     if (loginName === undefined && avatar === undefined) {
+      localStorageSet();
+      map.classList.toggle('hidden');
+      exit.classList.toggle('hidden');
+    }
+    if (loginName === '' && avatar === '') {
+      console.log('pysto ls');
       localStorageSet();
       map.classList.toggle('hidden');
       exit.classList.toggle('hidden');
