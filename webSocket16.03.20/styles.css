@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   max-width: 1024px;
-  max-height: 95vh;
+
   display: flex;
   border: hotpink solid 5px;
   border-radius: 5px;
