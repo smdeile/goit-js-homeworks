@@ -53,6 +53,6 @@
     "handlebars": "^4.5.3",
     "pnotify": "^5.0.0-alpha.6",
     "regenerator-runtime": "^0.13.3",
-    "swiper": "^5.3.6"
+    "swiper": "^6.5.1"
   }
 }
